@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_0.xsd ">
+	
+	<context-param>
+		<param-name>dbinfo</param-name>
+		<param-value>jdbcURL</param-value>
+	</context-param>
+	
+	
+	<servlet>
+		<servlet-name>myservlet</servlet-name>
+		<servlet-class>kr.co.bit.day7.Myservlet</servlet-class>
+		
+		<init-param>
+			<param-name>data</param-name>
+			<param-value>10</param-value>
+		</init-param>
+		
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>myservlet</servlet-name> <!-- 멥핑은 내가 지어준이름 변수로, 즉 마이 서블릿 -->
+		<url-pattern>/myservlet</url-pattern><!--데이7 마이서블릿에서 마이서블릿의 주소는 이렇게 쓸꺼야~ -->
+		
+	</servlet-mapping>
+
+	<!-- <servlet>
+		<servlet-name>yourServlet</servlet-name>
+		<servlet-class>kr.co.bit.day7.Yourservlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>yourServlet</servlet-name>
+		<url-pattern>/yourServlet</url-pattern>
+	</servlet-mapping>
+	 -->
+	
+	
+	<servlet>
+		<servlet-name>controller</servlet-name>
+		<servlet-class>kr.co.bit.controller.Mycontroller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>controller</servlet-name>
+		<url-pattern>/controller</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
